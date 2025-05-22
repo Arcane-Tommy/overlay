@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tournament Bracket</title>
+  <style>
+    @font-face {
+      font-family: 'Replica Pro';
+      src: url('ReplicaPro-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+      font-family: 'Replica Pro', sans-serif;
+    }
+
+    #bracket-container {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      background-image: url("bracket.png");
+      background-size: cover;
+      color: white;
+    }
+
+    .label {
+      position: absolute;
+      font-size: 14px;
+      font-weight: normal;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .winner {
+      font-weight: bold;
+      color: #ff7300;
+    }
+    #r32_m1_p1_name { top: 97px; left: 85px; }
+#r32_m1_p1_score { top: 97px; left: 285px; }
+#r32_m1_p2_name { top: 119px; left: 85px; }
+#r32_m1_p2_score { top: 119px; left: 285px; }
+
+#r32_m2_p1_name { top: 156px; left: 85px; }
+#r32_m2_p1_score { top: 156px; left: 285px; }
+#r32_m2_p2_name { top: 178px; left: 85px; }
+#r32_m2_p2_score { top: 178px; left: 285px; }
+
+#r32_m3_p1_name { top: 215px; left: 85px; }
+#r32_m3_p1_score { top: 215px; left: 285px; }
+#r32_m3_p2_name { top: 237px; left: 85px; }
+#r32_m3_p2_score { top: 237px; left: 285px; }
+
+#r32_m4_p1_name { top: 274px; left: 85px; }
+#r32_m4_p1_score { top: 274px; left: 285px; }
+#r32_m4_p2_name { top: 296px; left: 85px; }
+#r32_m4_p2_score { top: 296px; left: 285px; }
+
+#r32_m5_p1_name { top: 333px; left: 85px; }
+#r32_m5_p1_score { top: 333px; left: 285px; }
+#r32_m5_p2_name { top: 355px; left: 85px; }
+#r32_m5_p2_score { top: 355px; left: 285px; }
+
+#r32_m6_p1_name { top: 392px; left: 85px; }
+#r32_m6_p1_score { top: 392px; left: 285px; }
+#r32_m6_p2_name { top: 414px; left: 85px; }
+#r32_m6_p2_score { top: 414px; left: 285px; }
+
+#r32_m7_p1_name { top: 451px; left: 85px; }
+#r32_m7_p1_score { top: 451px; left: 285px; }
+#r32_m7_p2_name { top: 473px; left: 85px; }
+#r32_m7_p2_score { top: 473px; left: 285px; }
+
+#r32_m8_p1_name { top: 510px; left: 85px; }
+#r32_m8_p1_score { top: 510px; left: 285px; }
+#r32_m8_p2_name { top: 532px; left: 85px; }
+#r32_m8_p2_score { top: 532px; left: 285px; }
+
+#r32_m9_p1_name { top: 569px; left: 85px; }
+#r32_m9_p1_score { top: 569px; left: 285px; }
+#r32_m9_p2_name { top: 591px; left: 85px; }
+#r32_m9_p2_score { top: 591px; left: 285px; }
+
+#r32_m10_p1_name { top: 628px; left: 85px; }
+#r32_m10_p1_score { top: 628px; left: 285px; }
+#r32_m10_p2_name { top: 650px; left: 85px; }
+#r32_m10_p2_score { top: 650px; left: 285px; }
+
+#r32_m11_p1_name { top: 687px; left: 85px; }
+#r32_m11_p1_score { top: 687px; left: 285px; }
+#r32_m11_p2_name { top: 709px; left: 85px; }
+#r32_m11_p2_score { top: 709px; left: 285px; }
+
+#r32_m12_p1_name { top: 746px; left: 85px; }
+#r32_m12_p1_score { top: 746px; left: 285px; }
+#r32_m12_p2_name { top: 768px; left: 85px; }
+#r32_m12_p2_score { top: 768px; left: 285px; }
+
+#r32_m13_p1_name { top: 805px; left: 85px; }
+#r32_m13_p1_score { top: 805px; left: 285px; }
+#r32_m13_p2_name { top: 827px; left: 85px; }
+#r32_m13_p2_score { top: 827px; left: 285px; }
+
+#r32_m14_p1_name { top: 864px; left: 85px; }
+#r32_m14_p1_score { top: 864px; left: 285px; }
+#r32_m14_p2_name { top: 886px; left: 85px; }
+#r32_m14_p2_score { top: 886px; left: 285px; }
+
+#r32_m15_p1_name { top: 923px; left: 85px; }
+#r32_m15_p1_score { top: 923px; left: 285px; }
+#r32_m15_p2_name { top: 945px; left: 85px; }
+#r32_m15_p2_score { top: 945px; left: 285px; }
+
+#r32_m16_p1_name { top: 982px; left: 85px; }
+#r32_m16_p1_score { top: 982px; left: 285px; }
+#r32_m16_p2_name { top: 1004px; left: 85px; }
+#r32_m16_p2_score { top: 1004px; left: 285px; }
+
+#r16_m1_p1_name { top: 124px; left: 345px; }
+#r16_m1_p1_score { top: 124px; left: 543px; }
+#r16_m1_p2_name { top: 151px; left: 345px; }
+#r16_m1_p2_score { top: 151px; left: 543px; }
+
+#r16_m2_p1_name { top: 244px; left: 345px; }
+#r16_m2_p1_score { top: 244px; left: 543px; }
+#r16_m2_p2_name { top: 271px; left: 345px; }
+#r16_m2_p2_score { top: 271px; left: 543px; }
+
+#r16_m3_p1_name { top: 364px; left: 345px; }
+#r16_m3_p1_score { top: 364px; left: 543px; }
+#r16_m3_p2_name { top: 391px; left: 345px; }
+#r16_m3_p2_score { top: 391px; left: 543px; }
+
+#r16_m4_p1_name { top: 484px; left: 345px; }
+#r16_m4_p1_score { top: 484px; left: 543px; }
+#r16_m4_p2_name { top: 511px; left: 345px; }
+#r16_m4_p2_score { top: 511px; left: 543px; }
+
+#r16_m5_p1_name { top: 604px; left: 345px; }
+#r16_m5_p1_score { top: 604px; left: 543px; }
+#r16_m5_p2_name { top: 631px; left: 345px; }
+#r16_m5_p2_score { top: 631px; left: 543px; }
+
+#r16_m6_p1_name { top: 724px; left: 345px; }
+#r16_m6_p1_score { top: 724px; left: 543px; }
+#r16_m6_p2_name { top: 751px; left: 345px; }
+#r16_m6_p2_score { top: 751px; left: 543px; }
+
+#r16_m7_p1_name { top: 844px; left: 345px; }
+#r16_m7_p1_score { top: 844px; left: 543px; }
+#r16_m7_p2_name { top: 871px; left: 345px; }
+#r16_m7_p2_score { top: 871px; left: 543px; }
+
+#r16_m8_p1_name { top: 964px; left: 345px; }
+#r16_m8_p1_score { top: 964px; left: 543px; }
+#r16_m8_p2_name { top: 991px; left: 345px; }
+#r16_m8_p2_score { top: 991px; left: 543px; }#qf_m1_p1_name { top: 60px; left: 420px; }#qf_m1_p1_score { top: 74px; left: 420px; }#qf_m1_p2_name { top: 124px; left: 420px; }#qf_m1_p2_score { top: 138px; left: 420px; }#qf_m2_p1_name { top: 236px; left: 420px; }#qf_m2_p1_score { top: 250px; left: 420px; }#qf_m2_p2_name { top: 300px; left: 420px; }#qf_m2_p2_score { top: 314px; left: 420px; }#qf_m3_p1_name { top: 412px; left: 420px; }#qf_m3_p1_score { top: 426px; left: 420px; }#qf_m3_p2_name { top: 476px; left: 420px; }#qf_m3_p2_score { top: 490px; left: 420px; }#qf_m4_p1_name { top: 588px; left: 420px; }#qf_m4_p1_score { top: 602px; left: 420px; }#qf_m4_p2_name { top: 652px; left: 420px; }#qf_m4_p2_score { top: 666px; left: 420px; }#sf_m1_p1_name { top: 130px; left: 620px; }#sf_m1_p1_score { top: 144px; left: 620px; }#sf_m1_p2_name { top: 194px; left: 620px; }#sf_m1_p2_score { top: 208px; left: 620px; }#sf_m2_p1_name { top: 370px; left: 620px; }#sf_m2_p1_score { top: 384px; left: 620px; }#sf_m2_p2_name { top: 434px; left: 620px; }#sf_m2_p2_score { top: 448px; left: 620px; }#finals_p1_name { top: 270px; left: 800px; }#finals_p1_score { top: 284px; left: 800px; }#finals_p2_name { top: 334px; left: 800px; }#finals_p2_score { top: 348px; left: 800px; }
+  </style>
+</head>
+<body>
+  <div id="bracket-container">
+    <div class="label" id="r32_m1_p1_name">...</div><div class="label" id="r32_m1_p1_score">...</div><div class="label" id="r32_m1_p2_name">...</div><div class="label" id="r32_m1_p2_score">...</div><div class="label" id="r32_m2_p1_name">...</div><div class="label" id="r32_m2_p1_score">...</div><div class="label" id="r32_m2_p2_name">...</div><div class="label" id="r32_m2_p2_score">...</div><div class="label" id="r32_m3_p1_name">...</div><div class="label" id="r32_m3_p1_score">...</div><div class="label" id="r32_m3_p2_name">...</div><div class="label" id="r32_m3_p2_score">...</div><div class="label" id="r32_m4_p1_name">...</div><div class="label" id="r32_m4_p1_score">...</div><div class="label" id="r32_m4_p2_name">...</div><div class="label" id="r32_m4_p2_score">...</div><div class="label" id="r32_m5_p1_name">...</div><div class="label" id="r32_m5_p1_score">...</div><div class="label" id="r32_m5_p2_name">...</div><div class="label" id="r32_m5_p2_score">...</div><div class="label" id="r32_m6_p1_name">...</div><div class="label" id="r32_m6_p1_score">...</div><div class="label" id="r32_m6_p2_name">...</div><div class="label" id="r32_m6_p2_score">...</div><div class="label" id="r32_m7_p1_name">...</div><div class="label" id="r32_m7_p1_score">...</div><div class="label" id="r32_m7_p2_name">...</div><div class="label" id="r32_m7_p2_score">...</div><div class="label" id="r32_m8_p1_name">...</div><div class="label" id="r32_m8_p1_score">...</div><div class="label" id="r32_m8_p2_name">...</div><div class="label" id="r32_m8_p2_score">...</div><div class="label" id="r32_m9_p1_name">...</div><div class="label" id="r32_m9_p1_score">...</div><div class="label" id="r32_m9_p2_name">...</div><div class="label" id="r32_m9_p2_score">...</div><div class="label" id="r32_m10_p1_name">...</div><div class="label" id="r32_m10_p1_score">...</div><div class="label" id="r32_m10_p2_name">...</div><div class="label" id="r32_m10_p2_score">...</div><div class="label" id="r32_m11_p1_name">...</div><div class="label" id="r32_m11_p1_score">...</div><div class="label" id="r32_m11_p2_name">...</div><div class="label" id="r32_m11_p2_score">...</div><div class="label" id="r32_m12_p1_name">...</div><div class="label" id="r32_m12_p1_score">...</div><div class="label" id="r32_m12_p2_name">...</div><div class="label" id="r32_m12_p2_score">...</div><div class="label" id="r32_m13_p1_name">...</div><div class="label" id="r32_m13_p1_score">...</div><div class="label" id="r32_m13_p2_name">...</div><div class="label" id="r32_m13_p2_score">...</div><div class="label" id="r32_m14_p1_name">...</div><div class="label" id="r32_m14_p1_score">...</div><div class="label" id="r32_m14_p2_name">...</div><div class="label" id="r32_m14_p2_score">...</div><div class="label" id="r32_m15_p1_name">...</div><div class="label" id="r32_m15_p1_score">...</div><div class="label" id="r32_m15_p2_name">...</div><div class="label" id="r32_m15_p2_score">...</div><div class="label" id="r32_m16_p1_name">...</div><div class="label" id="r32_m16_p1_score">...</div><div class="label" id="r32_m16_p2_name">...</div><div class="label" id="r32_m16_p2_score">...</div><div class="label" id="r16_m1_p1_name">...</div><div class="label" id="r16_m1_p1_score">...</div><div class="label" id="r16_m1_p2_name">...</div><div class="label" id="r16_m1_p2_score">...</div><div class="label" id="r16_m2_p1_name">...</div><div class="label" id="r16_m2_p1_score">...</div><div class="label" id="r16_m2_p2_name">...</div><div class="label" id="r16_m2_p2_score">...</div><div class="label" id="r16_m3_p1_name">...</div><div class="label" id="r16_m3_p1_score">...</div><div class="label" id="r16_m3_p2_name">...</div><div class="label" id="r16_m3_p2_score">...</div><div class="label" id="r16_m4_p1_name">...</div><div class="label" id="r16_m4_p1_score">...</div><div class="label" id="r16_m4_p2_name">...</div><div class="label" id="r16_m4_p2_score">...</div><div class="label" id="r16_m5_p1_name">...</div><div class="label" id="r16_m5_p1_score">...</div><div class="label" id="r16_m5_p2_name">...</div><div class="label" id="r16_m5_p2_score">...</div><div class="label" id="r16_m6_p1_name">...</div><div class="label" id="r16_m6_p1_score">...</div><div class="label" id="r16_m6_p2_name">...</div><div class="label" id="r16_m6_p2_score">...</div><div class="label" id="r16_m7_p1_name">...</div><div class="label" id="r16_m7_p1_score">...</div><div class="label" id="r16_m7_p2_name">...</div><div class="label" id="r16_m7_p2_score">...</div><div class="label" id="r16_m8_p1_name">...</div><div class="label" id="r16_m8_p1_score">...</div><div class="label" id="r16_m8_p2_name">...</div><div class="label" id="r16_m8_p2_score">...</div><div class="label" id="qf_m1_p1_name">...</div><div class="label" id="qf_m1_p1_score">...</div><div class="label" id="qf_m1_p2_name">...</div><div class="label" id="qf_m1_p2_score">...</div><div class="label" id="qf_m2_p1_name">...</div><div class="label" id="qf_m2_p1_score">...</div><div class="label" id="qf_m2_p2_name">...</div><div class="label" id="qf_m2_p2_score">...</div><div class="label" id="qf_m3_p1_name">...</div><div class="label" id="qf_m3_p1_score">...</div><div class="label" id="qf_m3_p2_name">...</div><div class="label" id="qf_m3_p2_score">...</div><div class="label" id="qf_m4_p1_name">...</div><div class="label" id="qf_m4_p1_score">...</div><div class="label" id="qf_m4_p2_name">...</div><div class="label" id="qf_m4_p2_score">...</div><div class="label" id="sf_m1_p1_name">...</div><div class="label" id="sf_m1_p1_score">...</div><div class="label" id="sf_m1_p2_name">...</div><div class="label" id="sf_m1_p2_score">...</div><div class="label" id="sf_m2_p1_name">...</div><div class="label" id="sf_m2_p1_score">...</div><div class="label" id="sf_m2_p2_name">...</div><div class="label" id="sf_m2_p2_score">...</div><div class="label" id="finals_p1_name">...</div><div class="label" id="finals_p1_score">...</div><div class="label" id="finals_p2_name">...</div><div class="label" id="finals_p2_score">...</div>
+  </div>
+  <script>
+    const sheetID = "1UhN1ZO7Lenz5mLLnslzv-p78cllWLBbc7KBXEmRg8wY";
+    const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json`;
+
+    async function fetchBracket() {
+      try {
+        const res = await fetch(sheetURL);
+        const text = await res.text();
+        const json = JSON.parse(text.substr(47).slice(0, -2));
+        const rows = json.table.rows;
+
+        for (let i = 0; i < rows.length; i++) {
+          const match = rows[i];
+          const id = match.c[0]?.v?.toLowerCase().replace(/\s+/g, '_');
+          const p1 = match.c[1]?.v || "";
+          const s1 = match.c[2]?.v || "";
+          const p2 = match.c[3]?.v || "";
+          const s2 = match.c[4]?.v || "";
+          const winner = match.c[5]?.v;
+
+          const p1NameEl = document.getElementById(id + "_p1_name");
+          const p1ScoreEl = document.getElementById(id + "_p1_score");
+          const p2NameEl = document.getElementById(id + "_p2_name");
+          const p2ScoreEl = document.getElementById(id + "_p2_score");
+
+          if (p1NameEl) {
+            p1NameEl.textContent = p1;
+            p1NameEl.className = "label" + (p1 === winner ? " winner" : "");
+          }
+          if (p1ScoreEl) {
+            p1ScoreEl.textContent = s1;
+          }
+          if (p2NameEl) {
+            p2NameEl.textContent = p2;
+            p2NameEl.className = "label" + (p2 === winner ? " winner" : "");
+          }
+          if (p2ScoreEl) {
+            p2ScoreEl.textContent = s2;
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load bracket:", err);
+      }
+    }
+
+    fetchBracket();
+    setInterval(fetchBracket, 10000);
+  </script>
+</body>
+</html>
